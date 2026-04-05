@@ -31,7 +31,7 @@ const translation = [
   },
   {
     brinc: "Land and expand",
-    ent: "Abercrombie: $1K → $41K over 11 deals. 41x account growth.",
+    ent: "Abercrombie: months of follow-up to land the first deal, then $1K → $41K over 11 deals. 41x account growth through persistence.",
   },
   {
     brinc: "Speed to lead",
@@ -39,7 +39,7 @@ const translation = [
   },
   {
     brinc: "Pipeline management",
-    ent: "132 brands tracked, renewal calendar, 5-touch re-outreach cadence",
+    ent: "Scraping Expo West for up-and-coming brands, tracking DTC funding rounds to identify brands ready to expand into creator marketing — 132 brands managed as a 1-stop shop for 15+ health & wellness creators",
   },
 ];
 
