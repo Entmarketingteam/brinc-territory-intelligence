@@ -2,6 +2,13 @@
 
 import { motion } from "framer-motion";
 
+const locations = [
+  { place: "Fort Campbell", time: "20 min" },
+  { place: "Nashville", time: "1 hr" },
+  { place: "Lexington", time: "3 hrs" },
+  { place: "Indianapolis", time: "4 hrs" },
+];
+
 export default function ContactCTA() {
   return (
     <section className="py-32 px-6 relative">
@@ -49,12 +56,29 @@ export default function ContactCTA() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-text-muted font-mono">
-          <span>Clarksville, TN</span>
-          <span className="hidden sm:inline text-border">|</span>
-          <span>20 min from Fort Campbell</span>
-          <span className="hidden sm:inline text-border">|</span>
-          <span>20 min from Lexington</span>
+        {/* Geographic reach */}
+        <div className="mb-8">
+          <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-4">
+            Based in Clarksville, TN &mdash; Travel ready, 50%+ on the road
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-lg mx-auto">
+            {locations.map((loc) => (
+              <div
+                key={loc.place}
+                className="p-3 rounded-lg border border-border bg-surface/50 text-center"
+              >
+                <div className="text-sm font-mono font-bold text-accent">
+                  {loc.time}
+                </div>
+                <div className="text-[10px] text-text-muted mt-1">
+                  {loc.place}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-text-muted mt-4">
+            Send me anywhere the territory needs me. Bag is packed.
+          </p>
         </div>
 
         <p className="text-[10px] text-text-muted/50 mt-16 font-mono">

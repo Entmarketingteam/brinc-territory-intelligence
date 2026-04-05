@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const points = [
@@ -42,6 +43,29 @@ export default function Thesis() {
   return (
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
+        {/* Hero image for thesis section */}
+        <motion.div
+          className="relative w-full h-[240px] sm:h-[320px] md:h-[400px] rounded-xl overflow-hidden mb-16 border border-border"
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <Image
+            src="/images/brinc-911-response.webp"
+            alt="BRINC drone deployed in 911 emergency response"
+            fill
+            className="object-cover"
+            quality={90}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent" />
+          <div className="absolute bottom-6 left-6 right-6">
+            <p className="text-xs font-mono text-text-muted/80 uppercase tracking-wider">
+              BRINC Guardian &mdash; First responder drone deployment
+            </p>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
