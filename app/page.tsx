@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import TerritoryMap from "@/components/TerritoryMap";
 import PipelineTable from "@/components/PipelineTable";
+import ProductGallery from "@/components/ProductGallery";
 import Thesis from "@/components/Thesis";
 import SalesProof from "@/components/SalesProof";
 import OperatorStory from "@/components/OperatorStory";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <TerritoryMap />
       <PipelineTable />
+      <ProductGallery />
       <Thesis />
       <SalesProof />
       <OperatorStory />

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const stats = [
@@ -42,25 +43,32 @@ const translation = [
   },
 ];
 
-const brands = [
-  { name: "Target", domain: "target.com" },
-  { name: "Nike", domain: "nike.com" },
-  { name: "Adidas", domain: "adidas.com" },
-  { name: "NIVEA", domain: "nivea.com" },
-  { name: "Walmart", domain: "walmart.com" },
-  { name: "Nordstrom", domain: "nordstrom.com" },
-  { name: "Sephora", domain: "sephora.com" },
-  { name: "Lululemon", domain: "lululemon.com" },
-  { name: "Abercrombie", domain: "abercrombie.com" },
-  { name: "Peloton", domain: "onepeloton.com" },
-  { name: "Ulta", domain: "ulta.com" },
-  { name: "Athleta", domain: "athleta.gap.com" },
-  { name: "Fabletics", domain: "fabletics.com" },
-  { name: "AG1", domain: "drinkag1.com" },
-  { name: "Stanley", domain: "stanley1913.com" },
-  { name: "HelloFresh", domain: "hellofresh.com" },
-  { name: "Spanx", domain: "spanx.com" },
-  { name: "QVC", domain: "qvc.com" },
+// Local logo files use invert filter for dark bg visibility
+// Clearbit fallback for logos we don't have locally
+const brands: { name: string; src: string; local: boolean }[] = [
+  { name: "Abercrombie & Fitch", src: "/images/logos/abercrombie.png", local: true },
+  { name: "Lululemon", src: "/images/logos/lululemon.png", local: true },
+  { name: "Adidas", src: "/images/logos/adidas.svg", local: true },
+  { name: "Vuori", src: "/images/logos/vuori.png", local: true },
+  { name: "Caraway", src: "/images/logos/caraway.png", local: true },
+  { name: "Gruns", src: "/images/logos/gruns.png", local: true },
+  { name: "Olipop", src: "/images/logos/olipop.png", local: true },
+  { name: "Thorne", src: "/images/logos/thorne.svg", local: true },
+  { name: "Target", src: "https://logo.clearbit.com/target.com?size=200", local: false },
+  { name: "Nike", src: "https://logo.clearbit.com/nike.com?size=200", local: false },
+  { name: "NIVEA", src: "https://logo.clearbit.com/nivea.com?size=200", local: false },
+  { name: "Walmart", src: "https://logo.clearbit.com/walmart.com?size=200", local: false },
+  { name: "Nordstrom", src: "https://logo.clearbit.com/nordstrom.com?size=200", local: false },
+  { name: "Sephora", src: "https://logo.clearbit.com/sephora.com?size=200", local: false },
+  { name: "Ulta", src: "https://logo.clearbit.com/ulta.com?size=200", local: false },
+  { name: "Peloton", src: "https://logo.clearbit.com/onepeloton.com?size=200", local: false },
+  { name: "Athleta", src: "https://logo.clearbit.com/athleta.gap.com?size=200", local: false },
+  { name: "Fabletics", src: "https://logo.clearbit.com/fabletics.com?size=200", local: false },
+  { name: "AG1", src: "https://logo.clearbit.com/drinkag1.com?size=200", local: false },
+  { name: "Stanley", src: "https://logo.clearbit.com/stanley1913.com?size=200", local: false },
+  { name: "HelloFresh", src: "https://logo.clearbit.com/hellofresh.com?size=200", local: false },
+  { name: "Spanx", src: "https://logo.clearbit.com/spanx.com?size=200", local: false },
+  { name: "QVC", src: "https://logo.clearbit.com/qvc.com?size=200", local: false },
 ];
 
 export default function SalesProof() {
@@ -120,23 +128,34 @@ export default function SalesProof() {
           <h3 className="text-xs font-mono text-text-muted tracking-[0.15em] uppercase mb-6 text-center">
             Brands in Our Portfolio
           </h3>
-          <div className="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-9 gap-3">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
             {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="flex flex-col items-center justify-center p-3 rounded-lg border border-border/50 bg-surface/50 hover:border-border-light transition-colors"
+                className="flex flex-col items-center justify-center p-4 rounded-lg border border-border/50 bg-surface/50 hover:border-border-light hover:bg-surface transition-colors min-h-[80px]"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`https://logo.clearbit.com/${brand.domain}?size=128`}
-                  alt={brand.name}
-                  className="w-8 h-8 object-contain brightness-0 invert opacity-70"
-                  loading="lazy"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
-                  }}
-                />
-                <span className="text-[9px] text-text-muted mt-1.5 text-center leading-tight">
+                {brand.local ? (
+                  <Image
+                    src={brand.src}
+                    alt={brand.name}
+                    width={120}
+                    height={48}
+                    className="max-w-[80px] max-h-[36px] w-auto h-auto object-contain brightness-0 invert opacity-80"
+                    loading="lazy"
+                  />
+                ) : (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img
+                    src={brand.src}
+                    alt={brand.name}
+                    className="max-w-[80px] max-h-[36px] w-auto h-auto object-contain brightness-0 invert opacity-80"
+                    loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                )}
+                <span className="text-[9px] text-text-muted mt-2 text-center leading-tight">
                   {brand.name}
                 </span>
               </div>
