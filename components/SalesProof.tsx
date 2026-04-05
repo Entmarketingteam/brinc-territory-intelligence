@@ -43,33 +43,26 @@ const translation = [
   },
 ];
 
-// Local logo files use invert filter for dark bg visibility
-// Clearbit fallback for logos we don't have locally
-const brands: { name: string; src: string; local: boolean }[] = [
-  { name: "Abercrombie & Fitch", src: "/images/logos/abercrombie.png", local: true },
-  { name: "Lululemon", src: "/images/logos/lululemon.png", local: true },
-  { name: "Adidas", src: "/images/logos/adidas.svg", local: true },
-  { name: "Vuori", src: "/images/logos/vuori.png", local: true },
-  { name: "Caraway", src: "/images/logos/caraway.png", local: true },
-  { name: "Gruns", src: "/images/logos/gruns.png", local: true },
-  { name: "Olipop", src: "/images/logos/olipop.png", local: true },
-  { name: "Thorne", src: "/images/logos/thorne.svg", local: true },
-  { name: "Target", src: "/images/logos/target.jpg", local: true },
-  { name: "Nordstrom", src: "/images/logos/nordstrom.png", local: true },
-  { name: "Athleta", src: "/images/logos/athleta.png", local: true },
-  { name: "Divi", src: "/images/logos/divi.jpg", local: true },
-  { name: "Nike", src: "https://logo.clearbit.com/nike.com?size=200", local: false },
-  { name: "NIVEA", src: "https://logo.clearbit.com/nivea.com?size=200", local: false },
-  { name: "Walmart", src: "https://logo.clearbit.com/walmart.com?size=200", local: false },
-  { name: "Sephora", src: "https://logo.clearbit.com/sephora.com?size=200", local: false },
-  { name: "Ulta", src: "https://logo.clearbit.com/ulta.com?size=200", local: false },
-  { name: "Peloton", src: "https://logo.clearbit.com/onepeloton.com?size=200", local: false },
-  { name: "Fabletics", src: "https://logo.clearbit.com/fabletics.com?size=200", local: false },
-  { name: "AG1", src: "https://logo.clearbit.com/drinkag1.com?size=200", local: false },
-  { name: "Stanley", src: "https://logo.clearbit.com/stanley1913.com?size=200", local: false },
-  { name: "HelloFresh", src: "https://logo.clearbit.com/hellofresh.com?size=200", local: false },
-  { name: "Spanx", src: "https://logo.clearbit.com/spanx.com?size=200", local: false },
-  { name: "QVC", src: "https://logo.clearbit.com/qvc.com?size=200", local: false },
+// Brands with local logo files
+const brandsWithLogos = [
+  { name: "Abercrombie & Fitch", src: "/images/logos/abercrombie.png" },
+  { name: "Lululemon", src: "/images/logos/lululemon.png" },
+  { name: "Adidas", src: "/images/logos/adidas.svg" },
+  { name: "Vuori", src: "/images/logos/vuori.png" },
+  { name: "Caraway", src: "/images/logos/caraway.png" },
+  { name: "Gruns", src: "/images/logos/gruns.png" },
+  { name: "Olipop", src: "/images/logos/olipop.png" },
+  { name: "Thorne", src: "/images/logos/thorne.svg" },
+  { name: "Target", src: "/images/logos/target.jpg" },
+  { name: "Nordstrom", src: "/images/logos/nordstrom.png" },
+  { name: "Athleta", src: "/images/logos/athleta.png" },
+];
+
+// Brands without local logos — text only
+const brandsTextOnly = [
+  "Nike", "NIVEA", "Walmart", "Sephora", "Ulta", "Peloton",
+  "Fabletics", "AG1", "Stanley", "HelloFresh", "Spanx", "QVC",
+  "Divi", "Merit Beauty",
 ];
 
 export default function SalesProof() {
@@ -129,38 +122,42 @@ export default function SalesProof() {
           <h3 className="text-xs font-mono text-text-muted tracking-[0.15em] uppercase mb-6 text-center">
             Brands in Our Portfolio
           </h3>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
-            {brands.map((brand) => (
+
+          {/* Logos row */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 mb-3">
+            {brandsWithLogos.map((brand) => (
               <div
                 key={brand.name}
                 className="flex flex-col items-center justify-center p-4 rounded-lg border border-border/50 bg-surface/50 hover:border-border-light hover:bg-surface transition-colors min-h-[80px]"
               >
-                {brand.local ? (
-                  <Image
-                    src={brand.src}
-                    alt={brand.name}
-                    width={120}
-                    height={48}
-                    className="max-w-[80px] max-h-[36px] w-auto h-auto object-contain brightness-0 invert opacity-80"
-                    loading="lazy"
-                  />
-                ) : (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
-                    src={brand.src}
-                    alt={brand.name}
-                    className="max-w-[80px] max-h-[36px] w-auto h-auto object-contain brightness-0 invert opacity-80"
-                    loading="lazy"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                  />
-                )}
+                <Image
+                  src={brand.src}
+                  alt={brand.name}
+                  width={120}
+                  height={48}
+                  className="max-w-[80px] max-h-[36px] w-auto h-auto object-contain brightness-0 invert opacity-80"
+                  loading="lazy"
+                />
                 <span className="text-[9px] text-text-muted mt-2 text-center leading-tight">
                   {brand.name}
                 </span>
               </div>
             ))}
+          </div>
+
+          {/* Text-only brands */}
+          <div className="flex flex-wrap justify-center gap-2 mt-4">
+            {brandsTextOnly.map((name) => (
+              <span
+                key={name}
+                className="px-3 py-1.5 rounded-full border border-border/50 bg-surface/30 text-xs text-text-muted font-medium"
+              >
+                {name}
+              </span>
+            ))}
+            <span className="px-3 py-1.5 rounded-full border border-border/50 bg-surface/30 text-xs text-text-secondary font-medium">
+              +95 more
+            </span>
           </div>
         </motion.div>
 

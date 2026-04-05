@@ -139,11 +139,13 @@ export default function TerritoryMap() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="relative w-full overflow-hidden rounded-xl border border-border bg-surface/30 p-2 sm:p-6">
+          <div className="relative w-full overflow-hidden rounded-xl border border-border bg-surface/30 p-2 sm:p-6 max-h-[500px]">
             <ComposableMap
               projection="geoAlbersUsa"
-              projectionConfig={{ scale: 1000 }}
-              style={{ width: "100%", height: "auto" }}
+              projectionConfig={{ scale: 900 }}
+              width={800}
+              height={500}
+              style={{ width: "100%", height: "auto", maxHeight: "460px" }}
             >
               <Geographies geography={GEO_URL}>
                 {({ geographies }) =>
