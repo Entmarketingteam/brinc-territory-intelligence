@@ -19,7 +19,7 @@ const translation = [
   },
   {
     brinc: "Multi-stakeholder selling",
-    ent: "Same brands across 4+ creators — horizontal account expansion",
+    ent: "9-figure brands like DrinkLMNT and Gruns renewed across 15 ENT Agency creators — horizontal account expansion",
   },
   {
     brinc: "Signal-based prospecting",
