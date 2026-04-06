@@ -129,22 +129,22 @@ export default function SalesProof() {
             Brands in Our Portfolio
           </h3>
 
-          {/* Logos row */}
+          {/* Logos row — white cards on dark bg */}
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 mb-3">
             {brandsWithLogos.map((brand) => (
               <div
                 key={brand.name}
-                className="flex flex-col items-center justify-center p-4 rounded-lg border border-border/50 bg-surface/50 hover:border-border-light hover:bg-surface transition-colors min-h-[80px]"
+                className="flex flex-col items-center justify-center p-4 rounded-xl bg-white hover:scale-[1.03] transition-transform min-h-[80px]"
               >
                 <Image
                   src={brand.src}
                   alt={brand.name}
                   width={120}
                   height={48}
-                  className="max-w-[80px] max-h-[36px] w-auto h-auto object-contain brightness-0 invert opacity-80"
+                  className="max-w-[80px] max-h-[36px] w-auto h-auto object-contain"
                   loading="lazy"
                 />
-                <span className="text-[9px] text-text-muted mt-2 text-center leading-tight">
+                <span className="text-[9px] text-gray-400 mt-2 text-center leading-tight">
                   {brand.name}
                 </span>
               </div>
