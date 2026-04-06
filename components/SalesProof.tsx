@@ -47,6 +47,7 @@ const translation = [
 const brandsWithLogos = [
   { name: "Target", src: "/images/logos/target.png" },
   { name: "Walmart", src: "/images/logos/walmart.png" },
+  { name: "Nike", src: "/images/logos/nike.png" },
   { name: "Nordstrom", src: "/images/logos/nordstrom.png" },
   { name: "Sephora", src: "/images/logos/sephora.jpg" },
   { name: "Abercrombie & Fitch", src: "/images/logos/abercrombie.png" },
@@ -55,8 +56,11 @@ const brandsWithLogos = [
   { name: "Athleta", src: "/images/logos/athleta.png" },
   { name: "Fabletics", src: "/images/logos/fabletics.png" },
   { name: "Vuori", src: "/images/logos/vuori.png" },
+  { name: "LMNT", src: "/images/logos/lmnt.jpg" },
   { name: "HelloFresh", src: "/images/logos/hellofresh.png" },
   { name: "Hiya", src: "/images/logos/hiya.jpg" },
+  { name: "Spanx", src: "/images/logos/spanx.png" },
+  { name: "Ulta", src: "/images/logos/ulta.png" },
   { name: "Gruns", src: "/images/logos/gruns.png" },
   { name: "Ka'Chava", src: "/images/logos/kachava.png" },
   { name: "Merit Beauty", src: "/images/logos/merit.jpg" },
@@ -65,12 +69,6 @@ const brandsWithLogos = [
   { name: "Caraway", src: "/images/logos/caraway.png" },
   { name: "Olipop", src: "/images/logos/olipop.png" },
   { name: "Divi", src: "/images/logos/divi.jpg" },
-];
-
-// Brands without local logos — text only
-const brandsTextOnly = [
-  "Nike", "NIVEA", "Ulta", "Peloton", "AG1", "Stanley",
-  "Spanx", "QVC", "LMNT", "Lumineux",
 ];
 
 export default function SalesProof() {
@@ -153,20 +151,10 @@ export default function SalesProof() {
             ))}
           </div>
 
-          {/* Text-only brands */}
-          <div className="flex flex-wrap justify-center gap-2 mt-4">
-            {brandsTextOnly.map((name) => (
-              <span
-                key={name}
-                className="px-3 py-1.5 rounded-full border border-border/50 bg-surface/30 text-xs text-text-muted font-medium"
-              >
-                {name}
-              </span>
-            ))}
-            <span className="px-3 py-1.5 rounded-full border border-border/50 bg-surface/30 text-xs text-text-secondary font-medium">
-              +95 more
-            </span>
-          </div>
+          {/* Total count */}
+          <p className="text-center text-sm text-text-muted mt-6 font-mono">
+            Showing 24 of <span className="text-accent font-bold">132</span> total brand partners managed
+          </p>
         </motion.div>
 
         {/* Translation table */}
