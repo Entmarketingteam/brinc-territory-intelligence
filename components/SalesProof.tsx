@@ -4,42 +4,42 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "$1.8M+", label: "Revenue Managed" },
+  { value: "$5.3M+", label: "Total Creator Revenue" },
+  { value: "$1.8M+", label: "Brand Deal Revenue" },
   { value: "132", label: "Brand Partners" },
   { value: "47", label: "Renewals (Top Account)" },
   { value: "60%+", label: "Repeat Rate" },
   { value: "83", label: "Brands in Peak Year" },
-  { value: "4+ yrs", label: "Longest Relationship" },
 ];
 
 const translation = [
   {
     brinc: "Account retention & renewal",
-    ent: "47 renewals, $560K, 4 years — same account",
-  },
-  {
-    brinc: "Multi-stakeholder selling",
-    ent: "9-figure brands like DrinkLMNT and Gruns renewed across 15 ENT Agency creators — horizontal account expansion",
-  },
-  {
-    brinc: "Signal-based prospecting",
-    ent: "Holiday campaigns, competitor activity, product launches — timed outreach",
-  },
-  {
-    brinc: "Grant / funding navigation",
-    ent: "Usage rights, whitelisting, Spark Ads — educating buyers on revenue they didn't know existed",
+    ent: "LMNT: 47 renewals, $560K over 4 years — same account, never re-pitched. Hiya: 43 payments, $117K in usage rights alone. Lumineux: 27 payments across 3 years, still signing new contracts in 2026.",
   },
   {
     brinc: "Land and expand",
-    ent: "Abercrombie: months of follow-up to land the first deal, then $1K → $41K over 11 deals. 41x account growth through persistence.",
+    ent: "Abercrombie: converted affiliate-only to paid campaigns after months of follow-up. $41K over 11 deals. Fabletics: $49K across 8 payments — now in 5-touch re-pitch sequence after contract concluded.",
   },
   {
-    brinc: "Speed to lead",
-    ent: "Sub-hour reply time in a space where creators get 50+ brand emails/day",
+    brinc: "Uncovering hidden revenue",
+    ent: "Usage rights & whitelisting: Hiya runs Nicki's content as paid ads and pays for every renewal window. Most creators leave this money entirely on the table. ENT tracks, invoices, and renegotiates every cycle.",
   },
   {
-    brinc: "Pipeline management",
-    ent: "Scraping Expo West for up-and-coming brands, tracking DTC funding rounds to identify brands ready to expand into creator marketing — 132 brands managed as a 1-stop shop for 15+ health & wellness creators",
+    brinc: "Platform diversification",
+    ent: "Q4 2024: $30K on 2 platforms (72% LTK). Q4 2025: $91K on 4 platforms (+202%). Amazon became the primary engine — $752K GMV confirmed in a single quarter. LTK dependency collapsed from 72% → 11%.",
+  },
+  {
+    brinc: "Signal-based prospecting",
+    ent: "Tracked DTC funding rounds, Expo West launches, competitor activity to time outreach. 132 brands managed proactively — not waiting for inbound.",
+  },
+  {
+    brinc: "Multi-stakeholder selling",
+    ent: "Brand deals involve procurement, marketing, legal, and finance. ENT managed contract execution (Docusign/PandaDoc), invoicing (Lumanu/PayPal), and re-negotiation across 132 brands in parallel.",
+  },
+  {
+    brinc: "Pipeline management at scale",
+    ent: "$5.3M+ in total documented creator revenue across all streams — brand deals, 4 affiliate platforms, and coaching commissions. 2025 on pace for ~$1.34M for one creator.",
   },
 ];
 
@@ -85,12 +85,10 @@ export default function SalesProof() {
             Enterprise Sales Proof
           </h2>
           <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-            I&apos;ve managed $1.8M in recurring revenue.
+            $5.3M+ in documented creator revenue. 132 brand partners. One creator.
           </p>
           <p className="text-text-secondary max-w-2xl mb-4">
-            As co-founder of ENT Agency, I built and managed a portfolio of 132
-            brand partnerships across Fortune 500 retailers and top DTC brands.
-            Different vertical. Identical sales discipline.
+            As co-founder of ENT Agency, I built and managed a full-stack revenue operation — $1.8M+ in direct brand deal revenue, $752K in Amazon GMV in a single quarter, and $3.48M in coaching program commissions. Across 4 affiliate platforms, 132 brand partners, and 4+ years of renewals. Different vertical. Identical sales discipline.
           </p>
         </motion.div>
 
