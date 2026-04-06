@@ -45,24 +45,32 @@ const translation = [
 
 // Brands with local logo files
 const brandsWithLogos = [
+  { name: "Target", src: "/images/logos/target.png" },
+  { name: "Walmart", src: "/images/logos/walmart.png" },
+  { name: "Nordstrom", src: "/images/logos/nordstrom.png" },
+  { name: "Sephora", src: "/images/logos/sephora.jpg" },
   { name: "Abercrombie & Fitch", src: "/images/logos/abercrombie.png" },
   { name: "Lululemon", src: "/images/logos/lululemon.png" },
   { name: "Adidas", src: "/images/logos/adidas.svg" },
-  { name: "Vuori", src: "/images/logos/vuori.png" },
-  { name: "Caraway", src: "/images/logos/caraway.png" },
-  { name: "Gruns", src: "/images/logos/gruns.png" },
-  { name: "Olipop", src: "/images/logos/olipop.png" },
-  { name: "Thorne", src: "/images/logos/thorne.svg" },
-  { name: "Target", src: "/images/logos/target.jpg" },
-  { name: "Nordstrom", src: "/images/logos/nordstrom.png" },
   { name: "Athleta", src: "/images/logos/athleta.png" },
+  { name: "Fabletics", src: "/images/logos/fabletics.png" },
+  { name: "Vuori", src: "/images/logos/vuori.png" },
+  { name: "HelloFresh", src: "/images/logos/hellofresh.png" },
+  { name: "Hiya", src: "/images/logos/hiya.jpg" },
+  { name: "Gruns", src: "/images/logos/gruns.png" },
+  { name: "Ka'Chava", src: "/images/logos/kachava.png" },
+  { name: "Merit Beauty", src: "/images/logos/merit.jpg" },
+  { name: "Thrive Market", src: "/images/logos/thrivemarket.png" },
+  { name: "Thorne", src: "/images/logos/thorne.svg" },
+  { name: "Caraway", src: "/images/logos/caraway.png" },
+  { name: "Olipop", src: "/images/logos/olipop.png" },
+  { name: "Divi", src: "/images/logos/divi.jpg" },
 ];
 
 // Brands without local logos — text only
 const brandsTextOnly = [
-  "Nike", "NIVEA", "Walmart", "Sephora", "Ulta", "Peloton",
-  "Fabletics", "AG1", "Stanley", "HelloFresh", "Spanx", "QVC",
-  "Divi", "Merit Beauty",
+  "Nike", "NIVEA", "Ulta", "Peloton", "AG1", "Stanley",
+  "Spanx", "QVC", "LMNT", "Lumineux",
 ];
 
 export default function SalesProof() {
