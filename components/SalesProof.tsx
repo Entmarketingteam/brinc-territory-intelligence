@@ -4,11 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "$5.3M+", label: "Total Creator Revenue" },
-  { value: "$1.8M+", label: "Brand Deal Revenue" },
+  { value: "$4M+", label: "Total Creator Revenue" },
+  { value: "$1.9M+", label: "Brand Deal Revenue" },
   { value: "132", label: "Brand Partners" },
   { value: "47", label: "Renewals (Top Account)" },
-  { value: "60%+", label: "Repeat Rate" },
+  { value: "$4.5M+", label: "Amazon GMV Driven" },
   { value: "83", label: "Brands in Peak Year" },
 ];
 
@@ -27,7 +27,7 @@ const translation = [
   },
   {
     brinc: "Platform diversification",
-    ent: "Q4 2024: $30K on 2 platforms (72% LTK). Q4 2025: $91K on 4 platforms (+202%). Amazon became the primary engine — $752K GMV confirmed in a single quarter. LTK dependency collapsed from 72% → 11%.",
+    ent: "Q4 2024: $30K on 2 platforms (72% LTK). Q4 2025: $91K on 4 platforms (+202%). Amazon became the primary engine — $861K GMV in Q4 2025 alone (+202% YoY), $56K commission (+560% YoY). LTK dependency collapsed from 72% → 11%.",
   },
   {
     brinc: "Signal-based prospecting",
@@ -39,7 +39,7 @@ const translation = [
   },
   {
     brinc: "Pipeline management at scale",
-    ent: "$5.3M+ in total documented creator revenue across all streams — brand deals, 4 affiliate platforms, and coaching commissions. 2025 on pace for ~$1.34M for one creator.",
+    ent: "$4M+ in verified creator revenue across all streams — $1.9M brand deals, $1.6M coaching, $207K Amazon commission, $289K LTK, $45K other affiliates. 2025 full-year Amazon commission: $111K on $2.2M GMV. One creator.",
   },
 ];
 
@@ -85,10 +85,10 @@ export default function SalesProof() {
             Enterprise Sales Proof
           </h2>
           <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-            $5.3M+ in documented creator revenue. 132 brand partners. One creator.
+            $4M+ in documented creator revenue. 132 brand partners. One creator.
           </p>
           <p className="text-text-secondary max-w-2xl mb-4">
-            As co-founder of ENT Agency, I built and managed a full-stack revenue operation — $1.8M+ in direct brand deal revenue, $752K in Amazon GMV in a single quarter, and $3.48M in coaching program commissions. Across 4 affiliate platforms, 132 brand partners, and 4+ years of renewals. Different vertical. Identical sales discipline.
+            As co-founder of ENT Agency, I built and managed a full-stack revenue operation — $1.9M+ in direct brand deal revenue, $4.5M+ in Amazon GMV driven, $1.6M in coaching program commissions, and $207K+ in Amazon affiliate commissions. Across 4 affiliate platforms, 132 brand partners, and 4+ years of renewals. Different vertical. Identical sales discipline.
           </p>
         </motion.div>
 
