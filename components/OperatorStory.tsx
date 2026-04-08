@@ -29,8 +29,8 @@ const timeline = [
   },
   {
     year: "2022–Now",
-    title: "ENT Agency — $1.8M managed",
-    body: "Built an influencer marketing agency managing 132 brand partnerships. Consultative sales, multi-stakeholder deals, renewal engine, signal-based outreach. Same motion as enterprise — different vertical.",
+    title: "ENT Agency — $6M+ managed",
+    body: "Built an influencer marketing agency managing 132 brand partnerships across 3 legal entities. Consultative sales, multi-stakeholder deals, renewal engine, signal-based outreach. Same motion as enterprise — different vertical.",
     accent: false,
   },
   {
