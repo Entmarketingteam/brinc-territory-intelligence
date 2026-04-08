@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "$4M+", label: "Total Creator Revenue" },
+  { value: "$5.3M+", label: "Total Creator Revenue" },
   { value: "$1.9M+", label: "Brand Deal Revenue" },
   { value: "132", label: "Brand Partners" },
   { value: "47", label: "Renewals (Top Account)" },
@@ -39,7 +39,7 @@ const translation = [
   },
   {
     brinc: "Pipeline management at scale",
-    ent: "$4M+ in tax-verified creator revenue across 3 entities. 2025 alone: ~$2M (ENT Agency $636K + Entenmann Enterprise $934K + FWTFL $412K). ENT Agency doubled YoY: $299K → $636K (+113%). Peak year: FWTFL hit $1.06M in 2022.",
+    ent: "$5.3M+ in tax-verified creator revenue across 3 entities. 2025 alone: ~$2M (ENT Agency $636K + Entenmann Enterprise $934K + FWTFL $412K). ENT Agency doubled YoY: $299K → $636K (+113%). Peak year: FWTFL hit $1.06M in 2022. Entenmann Enterprise 2024: $799K.",
   },
 ];
 
@@ -85,10 +85,10 @@ export default function SalesProof() {
             Enterprise Sales Proof
           </h2>
           <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-            $4M+ in documented creator revenue. 132 brand partners. One creator.
+            $5.3M+ in documented creator revenue. 132 brand partners. One creator.
           </p>
           <p className="text-text-secondary max-w-2xl mb-4">
-            As co-founder of ENT Agency, I built and managed a full-stack revenue operation across 3 legal entities — tax-verified. ENT Agency alone doubled revenue YoY ($299K → $636K). 2025 combined: ~$2M across all entities. $4.5M+ in Amazon GMV driven. 132 brand partners. 4+ years of renewals. Different vertical. Identical sales discipline.
+            As co-founder of ENT Agency, I built and managed a full-stack revenue operation across 3 legal entities — tax-verified P&amp;Ls across ENT Agency, Entenmann Enterprise, and FWTFL. ENT Agency doubled revenue YoY ($299K → $636K). 2025 combined: ~$2M across all entities. $4.5M+ in Amazon GMV driven. 132 brand partners. 4+ years of renewals. Different vertical. Identical sales discipline.
           </p>
         </motion.div>
 
