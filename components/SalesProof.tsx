@@ -39,7 +39,7 @@ const translation = [
   },
   {
     brinc: "Pipeline management at scale",
-    ent: "$4M+ in verified creator revenue across all streams — $1.9M brand deals, $1.6M coaching, $207K Amazon commission, $289K LTK, $45K other affiliates. 2025 full-year Amazon commission: $111K on $2.2M GMV. One creator.",
+    ent: "$4M+ in verified creator revenue across all streams — $1.9M brand deals, $1.6M coaching, $230K+ Amazon earnings, $289K LTK, $45K other affiliates. 2025 Amazon alone: $129K earned on $2.2M ordered revenue. One creator.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function SalesProof() {
             $4M+ in documented creator revenue. 132 brand partners. One creator.
           </p>
           <p className="text-text-secondary max-w-2xl mb-4">
-            As co-founder of ENT Agency, I built and managed a full-stack revenue operation — $1.9M+ in direct brand deal revenue, $4.5M+ in Amazon GMV driven, $1.6M in coaching program commissions, and $207K+ in Amazon affiliate commissions. Across 4 affiliate platforms, 132 brand partners, and 4+ years of renewals. Different vertical. Identical sales discipline.
+            As co-founder of ENT Agency, I built and managed a full-stack revenue operation — $1.9M+ in direct brand deal revenue, $4.5M+ in Amazon GMV driven, $1.6M in coaching program commissions, and $230K+ in Amazon affiliate earnings. Across 4 affiliate platforms, 132 brand partners, and 4+ years of renewals. Different vertical. Identical sales discipline.
           </p>
         </motion.div>
 
