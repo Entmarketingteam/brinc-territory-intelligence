@@ -22,6 +22,15 @@ interface StateData {
 
 const targetStates: StateData[] = [
   {
+    abbr: "KY",
+    name: "Kentucky",
+    leads: 14,
+    p1: 2,
+    banStatus: "Active — Chinese drone ban in effect",
+    urgency: "immediate",
+    topAccount: "Lexington PD — mid-vendor evaluation NOW; Louisville Metro — budget approved",
+  },
+  {
     abbr: "FL",
     name: "Florida",
     leads: 52,
@@ -91,6 +100,7 @@ const stateNameMap: Record<string, string> = {
   Florida: "FL",
   Texas: "TX",
   Tennessee: "TN",
+  Kentucky: "KY",
   Georgia: "GA",
   Arkansas: "AR",
   Mississippi: "MS",

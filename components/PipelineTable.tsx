@@ -15,6 +15,8 @@ interface Lead {
 }
 
 const leads: Lead[] = [
+  { agency: "Lexington Police Department", city: "Lexington", state: "KY", score: 9, dfrFit: "DFR Candidate", banStatus: "Active", tier: "Tier 1", notes: "Mid-vendor evaluation — active procurement NOW" },
+  { agency: "Louisville Metro Police", city: "Louisville", state: "KY", score: 9, dfrFit: "DFR Candidate", banStatus: "Active", tier: "Tier 1", notes: "Budget approved — fleet replacement in progress" },
   { agency: "Collier County Sheriff's Office", city: "Naples", state: "FL", score: 8, dfrFit: "Active DFR", banStatus: "Active", tier: "Tier 1", notes: "31 drones, 9,048+ flights" },
   { agency: "Pearland Police Department", city: "Pearland", state: "TX", score: 8, dfrFit: "Active DFR", banStatus: "Partial", tier: "Tier 2", notes: "Nation's first BVLOS DFR" },
   { agency: "Montgomery County SO", city: "Conroe", state: "TX", score: 8, dfrFit: "Active DFR", banStatus: "Partial", tier: "Tier 2", notes: "16 FAA-certified pilots" },
@@ -35,9 +37,13 @@ const leads: Lead[] = [
   { agency: "Palm Beach County SO", city: "West Palm Beach", state: "FL", score: 6, dfrFit: "DFR Candidate", banStatus: "Active", tier: "Tier 1", notes: "100+ missions/mo pre-ban" },
   { agency: "TX Dept of Public Safety", city: "Austin", state: "TX", score: 5, dfrFit: "Non-public safety", banStatus: "Partial", tier: "Tier 2", notes: "450+ drones, 97% Chinese, ~$3.7M" },
   { agency: "N. Little Rock PD", city: "N. Little Rock", state: "AR", score: 7, dfrFit: "DFR Candidate", banStatus: "Phase-out", tier: "Tier 2", notes: "8 pilots, Autel per patrol car" },
+  { agency: "Mississippi Highway Patrol", city: "Jackson", state: "MS", score: 7, dfrFit: "DFR Candidate", banStatus: "Active", tier: "Tier 1", notes: "Statewide fleet compliance required" },
+  { agency: "Hinds County Sheriff's Office", city: "Jackson", state: "MS", score: 6, dfrFit: "DFR Candidate", banStatus: "Active", tier: "Tier 2", notes: "Full enforcement Jan 2025" },
+  { agency: "Las Vegas Metro Police", city: "Las Vegas", state: "NV", score: 7, dfrFit: "Active DFR", banStatus: "Active", tier: "Tier 1", notes: "Major fleet transition underway" },
+  { agency: "Clark County Sheriff", city: "Las Vegas", state: "NV", score: 6, dfrFit: "DFR Candidate", banStatus: "Active", tier: "Tier 2", notes: "Compliance deadline approaching" },
 ];
 
-const states = ["All", "FL", "TX", "TN", "GA", "AR", "MS", "NV"];
+const states = ["All", "FL", "TX", "TN", "KY", "GA", "AR", "MS", "NV"];
 
 export default function PipelineTable() {
   const [filter, setFilter] = useState("All");

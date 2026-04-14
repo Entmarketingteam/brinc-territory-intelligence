@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const locations = [
-  { place: "Fort Campbell", time: "20 min" },
-  { place: "Nashville", time: "1 hr" },
-  { place: "Lexington", time: "3 hrs" },
-  { place: "Indianapolis", time: "4 hrs" },
+  { place: "Nashville (hub)", time: "45 min" },
+  { place: "Louisville, KY", time: "2.5 hrs" },
+  { place: "Lexington, KY", time: "3 hrs" },
+  { place: "Atlanta, GA", time: "4 hrs" },
 ];
 
 export default function ContactCTA() {

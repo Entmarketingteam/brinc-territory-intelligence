@@ -72,39 +72,33 @@ const earlySignals = [
     signal: "Job postings",
     detail: '"UAS Program Manager", "RTCC Analyst", "Drone Coordinator"',
     timing: "30–90 days before procurement",
-    icon: "👤",
   },
   {
     signal: "Council workshop agendas",
     detail:
       '"Exploring drone program", "technology assessment", "pilot evaluation"',
     timing: "2–6 weeks before vote",
-    icon: "📋",
   },
   {
     signal: "Grant intent filings",
     detail: "Notice of intent to apply — FEMA, DHS, DOJ JAG pre-award",
     timing: "60–120 days before award",
-    icon: "💰",
   },
   {
     signal: "Incident spikes",
     detail:
       "Officer-involved shooting, fire response failure, traffic fatalities",
     timing: "Triggers internal conversations immediately",
-    icon: "🔴",
   },
   {
     signal: "Pilot program language",
     detail: '"Proof of concept", "trial period", "evaluation phase"',
     timing: "Budget already mentally allocated",
-    icon: "🧪",
   },
   {
     signal: "RFI / Sources Sought",
     detail: "Pre-RFP market research on SAM.gov and state procurement sites",
     timing: "Vendors being explored — window open",
-    icon: "📡",
   },
 ];
 
@@ -205,10 +199,7 @@ export default function MarketExpansion() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.06 }}
             >
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-base">{sig.icon}</span>
-                <span className="font-bold text-sm">{sig.signal}</span>
-              </div>
+              <p className="font-bold text-sm mb-2">{sig.signal}</p>
               <p className="text-xs text-text-secondary mb-2">{sig.detail}</p>
               <p className="text-[10px] font-mono text-accent">
                 {sig.timing}
